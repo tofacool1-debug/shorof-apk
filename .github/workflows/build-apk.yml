@@ -18,14 +18,8 @@ jobs:
           
       - run: flutter pub get
       
-      - name: Fix gradlew permission
-        run: chmod +x android/gradlew
-        
-      - name: Set Gradle version
-        run: cd android && ./gradlew wrapper --gradle-version 8.4
-        
       - name: Build APK Release
-        run: flutter build apk --release
+        run: cd android && java -jar gradle/wrapper/gradle-wrapper.jar assembleRelease --no-daemon
         
       - uses: actions/upload-artifact@v4
         with:
