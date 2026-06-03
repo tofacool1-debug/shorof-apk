@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(AlQomusApp());
+  runApp(AlQomuspremiumApp());
 }
 
 class AlQomusApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Al Qomus',
+      title: 'Al Qomus premium',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.emerald),
         useMaterial3: true,
       ),
       home: Scaffold(
-        appBar: AppBar(title: Text('Al Qomus - Kotak Premium')),
+        appBar: AppBar(title: Text('Al Qomus premium - Kotak Premium')),
         body: Center(
           child: Container(
             width: 300,
