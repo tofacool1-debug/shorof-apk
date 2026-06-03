@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: al-qomus-premium-apk
-          path: build/app/outputs/flutter-apk/app-release.apk 
+          path: build/app/outputs/flutter-apk/app-release.apk
           run: flutter build apk --release --no-pub
 
       - name: Upload APK Artifact
