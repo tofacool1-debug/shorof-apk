@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace "com.alqomus.app"
+    namespace "com.alqomus premium.app"
     compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
@@ -19,7 +19,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.alqomus.app"
+        applicationId "com.alqomus premium.app"
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
