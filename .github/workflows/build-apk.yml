@@ -26,5 +26,5 @@ jobs:
       
       - uses: actions/upload-artifact@v4
         with:
-          name: al-qomus-release-apk
+          name: al-qomus-premium-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
