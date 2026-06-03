@@ -1,4 +1,4 @@
-<manifest package="com.alqomus.app"
+Iin<manifest package="com.alqomus.app"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:label="Al Qomus"
@@ -13,8 +13,8 @@
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
             <meta-data
-                android:name="io.flutter.embedding.android.NormalTheme"
-                android:resource="@style/NormalTheme" />
+    android:name="flutterEmbedding"
+    android:value="2" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
