@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -29,20 +31,12 @@ jobs:
           git config core.fileMode true
           git update-index --chmod=+x android/gradlew
           chmod +x android/gradlew
-          ls -la android/gradlew
 
       - name: Flutter pub get
         run: flutter pub get
 
       - name: Build APK Release
-        run: cd android && ./gradlew assembleRelease --no-daemon
-
-      - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: al-qomus-premium-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
-          run: flutter build apk --release --no-pub
+        run: flutter build apk --release --no-pub
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
