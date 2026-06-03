@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -26,11 +24,11 @@ jobs:
           flutter-version: '3.22.0'
           channel: stable
 
-      - name: Fix gradlew permission
+      - name: Make gradlew executable
         run: |
-          git config core.fileMode true
           git update-index --chmod=+x android/gradlew
           chmod +x android/gradlew
+          ls -la android/gradlew
 
       - name: Flutter pub get
         run: flutter pub get
