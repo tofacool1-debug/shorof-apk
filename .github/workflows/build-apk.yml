@@ -18,14 +18,8 @@ jobs:
           
       - run: flutter pub get
       
-      - name: Install Gradle 8.4
-        run: |
-          wget https://services.gradle.org/distributions/gradle-8.4-all.zip
-          sudo unzip -d /opt gradle-8.4-all.zip
-          echo "/opt/gradle-8.4/bin" >> $GITHUB_PATH
-          
       - name: Build APK Release
-        run: cd android && gradle assembleRelease --no-daemon
+        run: flutter build apk --release --no-pub
         
       - uses: actions/upload-artifact@v4
         with:
