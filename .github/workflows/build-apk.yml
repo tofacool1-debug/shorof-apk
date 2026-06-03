@@ -21,9 +21,11 @@ jobs:
           flutter-version: '3.24.0'
           channel: 'stable'
       
-      - name: Give gradlew permission
-        run: chmod +x android/gradlew
-        # INI KUNCINYA BANG 🔑
+      - name: Make gradlew executable  
+  run: |
+    git update-index --chmod=+x android/gradlew
+    chmod +x android/gradlew
+    ls -la android/gradlew
       
       - name: Flutter pub get
         run: flutter pub get
