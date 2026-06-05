@@ -7,28 +7,40 @@ const btnMazid = document.getElementById('btnMazid');
 const hasilDiv = document.getElementById('hasil');
 const let API_KEY = localStorage.getItem('gemini_key');
 
-if(!API_KEY) {
+function bukaInputKey() {
   document.body.innerHTML += `
-    <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:999; display:flex; align-items:center; justify-content:center;">
-      <div style="background:#222; padding:20px; border-radius:10px; text-align:center; color:white; width:90%;">
+    <div id="boxKey" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:999; display:flex; align-items:center; justify-content:center;">
+      <div style="background:#222; padding:20px; border-radius:10px; text-align:center; color:white; width:90%; max-width:400px;">
         <h3>🔑 Masukkan API Key Gemini</h3>
-        <p style="font-size:12px;">Dapet di: aistudio.google.com/app/apikey</p>
-        <input id="keyInput" type="password" placeholder="Paste API Key di sini" style="width:100%; padding:10px; margin:10px 0;">
-        <button onclick="simpanKey()" style="padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:5px;">Simpan & Mulai</button>
+        <input id="keyInput" type="password" placeholder="Paste API Key di sini" style="width:100%; padding:10px; margin:10px 0; border-radius:5px; border:none;">
+        <button onclick="simpanKey()" style="padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;">Simpan & Mulai</button>
       </div>
     </div>
   `;
-  
-  window.simpanKey = function() {
-    let key = document.getElementById('keyInput').value.trim();
-    if(key) {
-      localStorage.setItem('gemini_key', key);
-      location.reload();
-    } else {
-      alert('Key jangan kosong bang!');
-    }
+}
+
+window.simpanKey = function() {
+  let key = document.getElementById('keyInput').value.trim();
+  if(key) {
+    localStorage.setItem('gemini_key', key);
+    document.getElementById('boxKey').remove();
+    location.reload();
+  } else {
+    alert('Key jangan kosong bang!');
   }
 }
+
+// Kalo key belum ada, langsung munculin box
+if(!API_KEY) {
+  bukaInputKey();
+}
+
+// Kasih fungsi ke tombol Ganti/Set API Key
+document.addEventListener('DOMContentLoaded', () => {
+  let btnKey = document.querySelector('button:contains("Ganti/Set API Key")');
+  if(!btnKey) btnKey = [...document.querySelectorAll('button')].find(b => b.innerText.includes('Ganti/Set API Key'));
+  if(btnKey) btnKey.onclick = bukaInputKey;
+});
 const babList = {
   bab1: "فَعَلَ يَفْعُلُ", bab2: "فَعِلَ يَفْعَلُ", bab3: "فَعَلَ يَفْعَلُ",
   bab4: "فَعِلَ يَفْعِلُ", bab5: "فَعُلَ يَفْعُلُ", bab6: "فَعَلَ يَفْعِلُ"
