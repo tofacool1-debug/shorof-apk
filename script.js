@@ -6,9 +6,28 @@ const btnMujarrod = document.getElementById('btnMujarrod');
 const btnMazid = document.getElementById('btnMazid');
 const hasilDiv = document.getElementById('hasil');
 const let API_KEY = localStorage.getItem('gemini_key');
+
 if(!API_KEY) {
-  API_KEY = prompt('masukan key di sini':\nDapet di aistudio.google.com/app/apikey');
-  if(API_KEY) localStorage.setItem('gemini_key', API_KEY);
+  document.body.innerHTML += `
+    <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:999; display:flex; align-items:center; justify-content:center;">
+      <div style="background:#222; padding:20px; border-radius:10px; text-align:center; color:white; width:90%;">
+        <h3>🔑 Masukkan API Key Gemini</h3>
+        <p style="font-size:12px;">Dapet di: aistudio.google.com/app/apikey</p>
+        <input id="keyInput" type="password" placeholder="Paste API Key di sini" style="width:100%; padding:10px; margin:10px 0;">
+        <button onclick="simpanKey()" style="padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:5px;">Simpan & Mulai</button>
+      </div>
+    </div>
+  `;
+  
+  window.simpanKey = function() {
+    let key = document.getElementById('keyInput').value.trim();
+    if(key) {
+      localStorage.setItem('gemini_key', key);
+      location.reload();
+    } else {
+      alert('Key jangan kosong bang!');
+    }
+  }
 }
 const babList = {
   bab1: "فَعَلَ يَفْعُلُ", bab2: "فَعِلَ يَفْعَلُ", bab3: "فَعَلَ يَفْعَلُ",
