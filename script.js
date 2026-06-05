@@ -42,8 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if(btnKey) btnKey.onclick = bukaInputKey;
 });
 const babList = {
-  bab1: "فَعَلَ يَفْعُلُ", bab2: "فَعِلَ يَفْعَلُ", bab3: "فَعَلَ يَفْعَلُ",
-  bab4: "فَعِلَ يَفْعِلُ", bab5: "فَعُلَ يَفْعُلُ", bab6: "فَعَلَ يَفْعِلُ"
+  bab1: "فَعَلَ يَفْعُلُ",
+  bab2: "فَعِلَ يَفْعَلُ",
+  bab3: "فَعَلَ يَفْعَلُ",
+  bab4: "فَعِلَ يَفْعِلُ",
+  bab5: "فَعُلَ يَفْعُلُ",
+  bab6: "فَعَلَ يَفْعِلُ"
 };
 Object.keys(babList).forEach(b => {
   selectBab.innerHTML += `<option value="${b}">${b.toUpperCase()} - ${babList[b]}</option>`;
