@@ -7,40 +7,55 @@ const btnMazid = document.getElementById('btnMazid');
 const hasilDiv = document.getElementById('hasil');
 const let API_KEY = localStorage.getItem('gemini_key');
 
+// === 2. FUNGSI BUKA BOX INPUT KEY ===
 function bukaInputKey() {
-  document.body.innerHTML += `
-    <div id="boxKey" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:999; display:flex; align-items:center; justify-content:center;">
-      <div style="background:#222; padding:20px; border-radius:10px; text-align:center; color:white; width:90%; max-width:400px;">
-        <h3>🔑 Masukkan API Key Gemini</h3>
-        <input id="keyInput" type="password" placeholder="Paste API Key di sini" style="width:100%; padding:10px; margin:10px 0; border-radius:5px; border:none;">
-        <button onclick="simpanKey()" style="padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;">Simpan & Mulai</button>
-      </div>
+  // Hapus box lama kalo ada
+  let boxLama = document.getElementById('boxKey');
+  if(boxLama) boxLama.remove();
+
+  // Bikin box baru
+  let div = document.createElement('div');
+  div.id = 'boxKey';
+  div.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:999; display:flex; align-items:center; justify-content:center;';
+  div.innerHTML = `
+    <div style="background:#222; padding:20px; border-radius:10px; text-align:center; color:white; width:90%; max-width:400px;">
+      <h3>🔑 Masukkan API Key Gemini</h3>
+      <p style="font-size:12px; color:#aaa;">aistudio.google.com/app/apikey</p>
+      <input id="keyInput" type="password" placeholder="Paste API Key di sini" style="width:100%; padding:10px; margin:10px 0; border-radius:5px; border:none;">
+      <button id="btnSimpanKey" style="padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;">Simpan & Mulai</button>
     </div>
   `;
-}
+  document.body.appendChild(div);
 
-window.simpanKey = function() {
-  let key = document.getElementById('keyInput').value.trim();
-  if(key) {
-    localStorage.setItem('gemini_key', key);
-    document.getElementById('boxKey').remove();
-    location.reload();
-  } else {
-    alert('Key jangan kosong bang!');
+  // Kasih fungsi ke tombol Simpan
+  document.getElementById('btnSimpanKey').onclick = function() {
+    let key = document.getElementById('keyInput').value.trim();
+    if(key) {
+      localStorage.setItem('gemini_key', key);
+      div.remove();
+      alert('Key tersimpan! Reload halaman');
+      location.reload();
+    } else {
+      alert('Key jangan kosong bang!');
+    }
   }
 }
 
-// Kalo key belum ada, langsung munculin box
+// === 3. KALO KEY KOSONG, LANGSUNG MUNCULIN BOX ===
 if(!API_KEY) {
-  bukaInputKey();
+  window.onload = bukaInputKey;
 }
 
-// Kasih fungsi ke tombol Ganti/Set API Key
-document.addEventListener('DOMContentLoaded', () => {
-  let btnKey = document.querySelector('button:contains("Ganti/Set API Key")');
-  if(!btnKey) btnKey = [...document.querySelectorAll('button')].find(b => b.innerText.includes('Ganti/Set API Key'));
-  if(btnKey) btnKey.onclick = bukaInputKey;
-});
+// === 4. KASIH FUNGSI KE TOMBOL "Ganti/Set API Key" ===
+// Tunggu HTML beres dulu
+window.onload = function() {
+  // Cari tombol berdasarkan text
+  let semuaBtn = document.querySelectorAll('button');
+  semuaBtn.forEach(btn => {
+    if(btn.innerText.includes('Ganti/Set API Key')) {
+      btn.onclick = bukaInputKey;
+    }
+  });
 const babList = {
   bab1: "فَعَلَ يَفْعُلُ",
   bab2: "فَعِلَ يَفْعَلُ",
