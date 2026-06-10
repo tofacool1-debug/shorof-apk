@@ -3,13 +3,13 @@
   "name": "Kamus Sharaf Al-I'ilal",
   "icons": [
   {
-    "src": "icon.jpeg",
+    "src": "/icon.jpeg",
     "sizes": "192x192",
     "type": "image/jpeg",
     "purpose": "any maskable"
   },
   {
-    "src": "icon.jpeg", 
+    "src": "/icon.jpeg", 
     "sizes": "512x512",
     "type": "image/jpeg",
     "purpose": "any maskable"
