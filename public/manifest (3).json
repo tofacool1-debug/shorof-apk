@@ -1,0 +1,39 @@
+{
+  "name": "shorof Al-i'lal",
+  "short_name": "kamus shorof al-i'lal",
+  "description": "aplikasi edukasi shorof tingkat awal dan lanjut,dengan sistem AI dan input manual",
+  "start_url": "/https://shorof.vercel.app/",
+  "display": "standalone",
+  "background_color": "#13f448",
+  "theme_color": "#0dd5e2",
+  "icons": [
+    {
+      "src": "https://py8fhxnkzwtsqdo9.public.blob.vercel-storage.com/front/favicon/vercel/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://py8fhxnkzwtsqdo9.public.blob.vercel-storage.com/front/favicon/vercel/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "tofacool1@",
+  "dir": "auto",
+  "lang": "id",
+  "orientation": "portrait",
+  "display_override": [
+    "standalone",
+    "window-controls-overlay"
+  ],
+  "categories": [
+    "education"
+  ],
+  "shortcuts": [
+    {
+      "name": "silverboyz",
+      "url": "",
+      "description": ""
+    }
+  ]
+}
