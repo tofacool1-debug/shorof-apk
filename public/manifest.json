@@ -34,11 +34,12 @@
   ],
   "screenshots" : [ 
     { 
-    "src": "screenshots.jpg",
+    "src": "Screenshot.jpg",
     "sizes": "1280x720",
     "type": "image/jpg",
     "platform": "wide",
-  } ],
+    } 
+  ],
   "shortcuts": [
     {
       "name": "silverboyz",
