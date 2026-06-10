@@ -8,12 +8,12 @@
   "theme_color": "#0dd5e2",
   "icons": [
     {
-      "src": "https://py8fhxnkzwtsqdo9.public.blob.vercel-storage.com/front/favicon/vercel/android-chrome-192x192.png",
+      "src": "icon.jpg",
       "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "https://py8fhxnkzwtsqdo9.public.blob.vercel-storage.com/front/favicon/vercel/android-chrome-512x512.png",
+      "src": "icon.jpg",
       "type": "image/jpg",
       "sizes": "512x512"
     }
