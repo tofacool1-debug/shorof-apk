@@ -1,6 +1,6 @@
 {
-  "name": "shorof Al-i'lal",
-  "short_name": "kamus shorof al-i'lal",
+  "name": "Shorof Al-I'lal",
+  "short_name": "kamus Shorof Al-I'lal",
   "description": "aplikasi edukasi shorof tingkat awal dan lanjut,dengan sistem AI dan input manual",
   "start_url": "/https://shorof.vercel.app/",
   "display": "standalone",
