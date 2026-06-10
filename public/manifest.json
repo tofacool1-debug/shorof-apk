@@ -1,0 +1,21 @@
+{
+  "short_name": "Shorof I'ilal",
+  "name": "Kamus Sharaf Al-I'ilal",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#121212",
+  "theme_color": "#059669",
+  "display": "standalone",
+  "orientation": "portrait"
+}
