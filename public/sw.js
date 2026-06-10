@@ -1,5 +1,5 @@
 // sw.js - Simple Service Worker for PWA compliance
-const CACHE_NAME = "sharaf-iilal-v1";
+const CACHE_NAME = "shorofal-i'lal-v2";
 const ASSETS = [
   "/",
   "/index.html",
