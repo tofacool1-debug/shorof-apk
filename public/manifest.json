@@ -9,13 +9,15 @@
   "icons": [
     {
       "src": "icon.jpg",
-      "type": "image/jpg",
-      "sizes": "192x192"
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any",
     },
     {
       "src": "icon.jpg",
-      "type": "image/jpg",
-      "sizes": "512x512"
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any",
     }
   ],
   "id": "tofacool1@",
@@ -32,7 +34,7 @@
   ],
   "screenshots" : [ 
     { 
-    "src": "screenshot.jpg",
+    "src": "screenshots.jpg",
     "sizes": "1280x720",
     "type": "image/jpg",
     "platform": "wide",
@@ -40,8 +42,8 @@
   "shortcuts": [
     {
       "name": "silverboyz",
-      "url": "",
-      "description": ""
+      "url": "/https://shorof.vercel.app/",
+      "description": "aplikasi serbaguna",
     }
   ]
 }
