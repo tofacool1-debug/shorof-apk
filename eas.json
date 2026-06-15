@@ -1,19 +1,40 @@
 {
   "cli": {
-    "version": ">= 5.0.0"
+    "version": ">= 5.9.0"
   },
   "build": {
-    "preview": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
       "android": {
         "buildType": "apk"
-        {
-  "build": {
+      },
+      "ios": {
+        "buildType": "debug"
+      },
+      "install": "npm install"
+    },
     "preview": {
-      "node": "18.17.0",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "buildType": "release"
+      },
+      "install": "npm install"
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "buildType": "release"
+      },
       "install": "npm install"
     }
+  },
+  "submit": {
+    "production": {}
   }
 }
-      }
-    }   
-  }
