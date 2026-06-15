@@ -1,31 +1,10 @@
 {
-  "cli": {
-    "version": ">= 5.9.0"
-  },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal",
-      "android": {
-        "buildType": "apk"
-      },
-      "install": "npm install"
-    },
     "preview": {
-      "distribution": "internal",
       "android": {
         "buildType": "apk"
-      },
-      "install": "npm install"
-    },
-    "production": {
-      "android": {
-        "buildType": "app-bundle"
       },
       "install": "npm install"
     }
-  },
-  "submit": {
-    "production": {}
   }
 }
