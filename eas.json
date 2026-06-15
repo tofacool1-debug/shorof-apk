@@ -9,9 +9,6 @@
       "android": {
         "buildType": "apk"
       },
-      "ios": {
-        "buildType": "debug"
-      },
       "install": "npm install"
     },
     "preview": {
@@ -19,17 +16,11 @@
       "android": {
         "buildType": "apk"
       },
-      "ios": {
-        "buildType": "release"
-      },
       "install": "npm install"
     },
     "production": {
       "android": {
         "buildType": "app-bundle"
-      },
-      "ios": {
-        "buildType": "release"
       },
       "install": "npm install"
     }
