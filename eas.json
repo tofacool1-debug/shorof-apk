@@ -1,13 +1,38 @@
 {
+  "cli": {
+    "version": ">= 7.0.0"
+  },
   "build": {
-    "preview": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
       "android": {
         "buildType": "apk"
       },
-      "install": "npm install",
       "env": {
-        "EAS_BUILD_NPM_INSTALL_COMMAND": "npm install"
+        "APP_ENV": "development"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "env": {
+        "APP_ENV": "staging"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "aab"
+      },
+      "env": {
+        "APP_ENV": "production"
       }
     }
+  },
+  "submit": {
+    "production": {}
   }
 }
