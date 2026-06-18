@@ -1,6 +1,0 @@
-{
-  "name": "Kamus Shorof Al-I'lal",
-  "description": "Aplikasi analisis morfologi, konjugasi (tasrif istilahi & lughowi), dan kaidah I'ilal kata kerja bahasa Arab Tsulatsi Mujarrod bertenaga IilalEngine.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
