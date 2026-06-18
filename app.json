@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Shorof Digital Pro",
-    "slug": "shorof-digital-pro",
+    "name": "Shorof Digital",
+    "slug": "shorof-digital",
     "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./public/icon.png",
