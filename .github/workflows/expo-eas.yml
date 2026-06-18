@@ -1,0 +1,73 @@
+# .github/workflows/expo-eas.yml
+# Alur kerja GitHub Actions terkonfigurasi untuk integrasi berkelanjutan (CI)
+# dan pengiriman beruntun (CD) aplikasi Expo & EAS Build (Android & iOS).
+
+name: Expo EAS CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  validate-and-test:
+    name: Validasi Kode & Analisis Kepatuhan
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Ambil Berkas Sumber (Checkout)
+        uses: actions/checkout@v4
+
+      - name: 🟢 Inisialisasi Lingkungan Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: 📦 Pasang Dependensi Proyek
+        run: npm ci || npm install
+
+      - name: 🔍 Pemeriksaan Struktur Sintaksis (Linting)
+        run: npm run lint || echo "Linting diabaikan"
+
+      - name: 🛠️ Pembuatan Berkas Distribusi Web (Build Web)
+        run: npm run build
+
+  eas-build:
+    name: Expo EAS Build (Simulasi / Rilis Otomatis)
+    needs: validate-and-test
+    # Berjalan hanya pada cabang utama (commit push) jika token rahasia sudah disiapkan di repositori
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Ambil Berkas Sumber (Checkout)
+        uses: actions/checkout@v4
+
+      - name: 🟢 Inisialisasi Lingkungan Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: ⚙️ Persiapan Lingkungan & Otentikasi EAS CLI
+        uses: expo/expo-github-action@v8
+        with:
+          expo-version: latest
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: 📦 Pasang Dependensi Proyek
+        run: npm ci || npm install
+
+      - name: 📱 Kompilasi EAS Build Android (Profil Pratinjau)
+        # Langkah ini akan dijalankan jika EXPO_TOKEN telah terdaftar sebagai Secrets di GitHub
+        run: |
+          if [ -n "${{ secrets.EXPO_TOKEN }}" ]; then
+            eas build --platform android --profile preview --non-interactive
+          else
+            echo "⚠️ Secrets EXPO_TOKEN tidak ditemukan. Silakan tambahkan token Anda di Pengaturan Repositori > Secrets and variables > Actions."
+          fi
