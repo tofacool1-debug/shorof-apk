@@ -16,14 +16,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.kamus.shorofdigitalpro"
+      "bundleIdentifier": "com.kamus.shorofdigital.pro"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./public/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.kamus.shorof.digital.pro font"
+      "package": "com.kamus.shorofdigital.pro font"
     },
     "web": {
       "favicon": "./public/icon.png"
