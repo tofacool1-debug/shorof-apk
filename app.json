@@ -29,7 +29,7 @@
       "favicon": "./assets/favicon.png"
     },
     "updates": {
-      "url": "https://u.expo.dev/71474c2a-503f-473b-97a8-bb87cd4b3e9e",
+      "url": "https://u.expo.dev/de3329e9-ed7a-4005-abfa-7bda2599b5d4",
       "fallbackToCacheTimeout": 5000,
       "checkOnLaunch": "ALWAYS",
       "enabled": true
