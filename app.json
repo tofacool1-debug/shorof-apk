@@ -11,18 +11,31 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kamus.shorofdigitalpro"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.shorofdigital.pro"
+      "package": "com.kamus.shorofdigital.pro"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/71474c2a-503f-473b-97a8-bb87cd4b3e9e",
+      "fallbackToCacheTimeout": 5000,
+      "checkOnLaunch": "ALWAYS",
+      "enabled": true
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     },
     "extra": {
       "eas": {
