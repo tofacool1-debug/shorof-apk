@@ -16,14 +16,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.kamus.shorofiilal"
+      "bundleIdentifier": "com.kamus.shorofdigitalpro"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./public/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.kamus.shorof.iilal font"
+      "package": "com.kamus.shorof.digital.pro font"
     },
     "web": {
       "favicon": "./public/icon.png"
@@ -39,7 +39,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "71474c2a-503f-473b-97a8-bb87cd4b3e9e"
+        "projectId": "de3329e9-ed7a-4005-abfa-7bda2599b5d4"
       }
     }
   }
