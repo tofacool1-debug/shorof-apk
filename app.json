@@ -2,10 +2,16 @@
   "expo": {
     "name": "Shorof Digital Pro",
     "slug": "shorof-digital",
-    "version": "2.0.0",
+    "version": "1.0.0",
+    "scheme": "shorofdigitalpro",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "plugins": [
       [
         "expo-splash-screen",
@@ -28,9 +34,11 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.kamus.shorofdigital.pro"
+      "package": "com.kamus.shorofdigital.pro",
+      "versionCode": 1
     },
     "web": {
+      "output": "static",
       "favicon": "./assets/favicon.png"
     },
     "updates": {
