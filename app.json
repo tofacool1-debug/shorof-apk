@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Shorof Digital Pro",
-    "slug": "shorof-digital-pro",
+    "slug": "shorof-digital",
     "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,20 +21,20 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.kamus.shorofiilal"
+      "bundleIdentifier": "com.kamus.shorofdigitalpro"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.kamus.shorof.iilal"
+      "package": "com.kamus.shorofdigital.pro"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "updates": {
-      "url": "https://u.expo.dev/71474c2a-503f-473b-97a8-bb87cd4b3e9e",
+      "url": "https://u.expo.dev/de3329e9-ed7a-4005-abfa-7bda2599b5d4",
       "fallbackToCacheTimeout": 5000,
       "enabled": true
     },
@@ -43,7 +43,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "71474c2a-503f-473b-97a8-bb87cd4b3e9e"
+        "projectId": "de3329e9-ed7a-4005-abfa-7bda2599b5d4"
       }
     }
   }
