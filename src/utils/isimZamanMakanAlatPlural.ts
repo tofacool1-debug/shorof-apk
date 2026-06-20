@@ -92,10 +92,10 @@ export function analyzeIsimAlatPlural(entry: DictionaryEntry): PluralIsimAlat {
     muntahal = `مَ${fa}َا${lam}ُّ`;
     explanation = `Isim Alat Mudho'af '${mufrod}' membagi wazan plural muf'al ke Jamak Taksir مَفَاعِلُ menjadi '${muntahal}' dengan melepaskan Idgham asal.`;
   } else if (bina === "Ajwaf") {
-    mufrod = `مِ${fa}ْوَا${lam}ٌ`; // مِقْوَالٌ / مِخْوَافٌ
-    qillah = `مَ${fa}َاوِي${lam}ُ`; // مَقَاوِيلُ
-    katsroh = `مَ${fa}َاوِي${lam}ُ`;
-    muntahal = `مَ${fa}َاوِي${lam}ُ`; // مَقَاوِيلُ
+    mufrod = `مِ${fa}ْو${lam}ٌ`; // مِقْوَلٌ / مِخْوَفٌ
+    qillah = `مَ${fa}َئوِي${lam}ُ`; // مَقَائيلُ
+    katsroh = `مَ${fa}َئوِي${lam}ُ`;
+    muntahal = `مَ${fa}َئوِي${lam}ُ`; // مَقَائيلُ
     explanation = `Isim Alat Ajwaf '${mufrod}' (biasanya wazan مِفْعَال untuk alat) dijamak-taksirkan ke wazan مَفَاعِيلُ mendalam menjadi '${muntahal}'.`;
   } else if (bina === "Naqis" || bina === "Lafif Maqrun" || bina === "Lafif Mafruq") {
     mufrod = `مِ${fa}${SUKUN}${ain}ًى`; // مِرْقًى / مِقْوًى
