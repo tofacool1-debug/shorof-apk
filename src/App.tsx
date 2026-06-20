@@ -170,7 +170,7 @@ export default function App() {
   const [initialLoading, setInitialLoading] = useState(true);
   const [updateStatus, setUpdateStatus] = useState('Checking database...');
   const [canGoBack, setCanGoBack] = useState(false);
-  const appUrl = 'https://shorof-digital-pro.web.app'; // Production Sync
+  const appUrl = 'https://shorof-digital.vercel.app'; // Production Sync
   let webViewRef = null;
 
   // Handle Android Hardware Back Button inside WebView history
