@@ -18,8 +18,8 @@
 -dontwarn org.codehaus.mojo.animal_sniffer.**
 
 # Keep our models and data classes intact if needed
--keep class com.kamus.shorofiilal.DictionaryData { *; }
--keep class com.kamus.shorofiilal.DictionaryEntry { *; }
--keep class com.kamus.shorofiilal.TasrifIstilahi { *; }
--keep class com.kamus.shorofiilal.DataWazan { *; }
--keep class com.kamus.shorofiilal.LughowiTasrif { *; }
+-keep class com.kamus.shorofdigitalpro.DictionaryData { *; }
+-keep class com.kamus.shorofdigitalpro.DictionaryEntry { *; }
+-keep class com.kamus.shorofdigitalpro.TasrifIstilahi { *; }
+-keep class com.kamus.shorofdigitalpro.DataWazan { *; }
+-keep class com.kamus.shorofdigitalpro.LughowiTasrif { *; }
