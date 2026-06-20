@@ -231,13 +231,17 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
       <WebView
-        ref={(ref) => (webViewRef = ref)}
-        source={{ uri: appUrl }}
-        style={styles.webView}
-        startInLoadingState={true}
-        onNavigationStateChange={(navState) => {
-          setCanGoBack(navState.canGoBack);
-        }}
+  ref={(ref) => (webViewRef = ref)}
+  source={{ uri: appUrl }}
+  style={styles.webView}
+  startInLoadingState={true}
+  javaScriptEnabled={true}
+  domStorageEnabled={true}
+  mixedContentMode="compatibility"
+  originWhitelist={['*']}
+  onNavigationStateChange={(navState) =>{
+    setCanGoBack(navState.canGoBack);
+  }}
         renderLoading={() => (
           <View style={styles.webviewLoader}>
             <ActivityIndicator size="small" color="#059669" />
