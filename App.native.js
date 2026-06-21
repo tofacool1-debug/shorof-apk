@@ -71,6 +71,10 @@ export default function App() {
         ref={(ref) => (webViewRef = ref)}
         source={{ uri: appUrl }}
         style={styles.webView}
+        originWhitelist={['*']}
+        javaScriptEnabled={true}
+        domStorageEnabled={true}
+        mixedContentMode="always"
         startInLoadingState={true}
         onNavigationStateChange={(navState) => {
           setCanGoBack(navState.canGoBack);
