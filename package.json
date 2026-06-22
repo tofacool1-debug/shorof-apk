@@ -41,10 +41,8 @@
     "vite": "^6.2.3"
   },
   "expo": {
-    "install": {
-      "exclude": [
-        "typescript"
-      ]
+    ""install": {
+      "exclude": ["expo-updates", "expo-splash-screen"]
     }
   }
 }
