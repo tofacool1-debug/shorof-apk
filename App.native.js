@@ -7,10 +7,10 @@ export default function App() {
   const [initialLoading, setInitialLoading] = useState(true);
   const [updateStatus, setUpdateStatus] = useState('Checking for updates...');
   const [canGoBack, setCanGoBack] = useState(false);
-  const appUrl = 'https://shorof-digital.vercel.app'; // PWA URL
+  const appUrl = 'https://project-7xl7h.vercel.app/'; // Ganti ke link Vercel lu
   let webViewRef = null;
 
-  // Handle Android Native Back Button to navigate inside the Shorof Digital Pro history
+  // Handle Android Native Back Button to navigate inside the WebView history
   useEffect(() => {
     const onBackPress = () => {
       if (canGoBack && webViewRef) {
@@ -19,8 +19,8 @@ export default function App() {
       }
       return false; // use default system exit
     };
-    BackHandler.addEventListener('hardwareBackPress', onBackPress);
-    return () => BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    const subscription = BackHandler.addEventListener('hardwareBackPress', onBackPress);
+    return () => subscription.remove();
   }, [canGoBack]);
 
   // Handle EAS Updates checking automatically on startup
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   webviewLoader: {
-    ...StyleSheet.absoluteFillObject,
+   ...StyleSheet.absoluteFillObject,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#ffffff',
