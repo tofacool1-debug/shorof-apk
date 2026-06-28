@@ -17,7 +17,7 @@
       ]
     ],
     "assetBundlePatterns": [
-      "**/*"
+      "assets/*"
     ],
     "ios": {
       "supportsTablet": true,
@@ -28,7 +28,12 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.shorof.digital"
+      "package": "com.shorof.digital",
+      "enableProguardInReleaseBuilds": true,
+      "shrinkResources": true,
+      "splits": {
+        "abi": true
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
