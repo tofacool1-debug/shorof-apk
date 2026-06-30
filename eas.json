@@ -3,9 +3,6 @@
     "version": ">= 10.0.0",
     "appVersionSource": "remote"
   },
-  "updates": {
-    "url": "https://u.expo.dev/de3329e9-ed7a-4005-abfa-7bda2599b5d4"
-  },
   "build": {
     "development": {
       "developmentClient": true,
