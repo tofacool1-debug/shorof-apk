@@ -1,26 +1,25 @@
 {
   "cli": {
-    "version": ">= 9.0.0"
+    "version": ">= 16.0.0"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
     "preview": {
       "distribution": "internal",
       "android": {
         "buildType": "apk"
-      }
+      },
+      "channel": "preview"
     },
     "production": {
-      "distribution": "store",
+      "distribution": "internal",
       "android": {
         "buildType": "apk"
-      }
+      },
+      "channel": "production"
     }
   },
-  "submit": {
-    "production": {}
+  "updates": {
+    "enabled": true,
+    "url": "https://u.expo.dev/ISI_PROJECT_ID_KAMU"
   }
 }
