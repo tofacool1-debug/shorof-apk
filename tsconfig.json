@@ -28,6 +28,7 @@
     "dist",
     "app.js",
     "App.js",
-    "App.native.js"
+    "App.native.js",
+    "src/expo-sqlite"
   ]
 }
