@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schema.expo.dev/version/51.0.0.json",
   "expo": {
     "name": "Shorof Digital Pro",
     "slug": "shorof-digital",
@@ -35,8 +36,9 @@
     },
     "updates": {
       "url": "https://u.expo.dev/de3329e9-ed7a-4005-abfa-7bda2599b5d4",
-      "fallbackToCacheTimeout": 5000,
-      "enabled": true
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
     },
     "runtimeVersion": {
       "policy": "appVersion"
