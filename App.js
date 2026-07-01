@@ -1,2 +1,2 @@
-import App from './App.native.js';
+import App from './src/App;
 export default App;
