@@ -17,9 +17,7 @@
       "android": {
         "buildType": "apk",
         "gradleCommand": ":app:assembleRelease",
-        "splits": {
-          "abi": true 
-        }
+        "appVariants": ["arm64-v8aRelease"]
       },
       "env": {
         "EXPO_USE_FAST_RESOLVER": "1"
