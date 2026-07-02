@@ -3,17 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
-import { View } from 'react-native';
+import React, { useState, useEffect, useCallback } from "react";
+import { View, Text } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 
 SplashScreen.preventAutoHideAsync(); // JANGAN HILANGIN INI
 
 export default function App() {
-  const [appIsReady, setAppIsReady] = useState(false)
-};
+  const [appIsReady, setAppIsReady] = useState(false); // <- GAK ADA ; DI SINI
 
-  useEffect(() => {
+  useEffect(() => { // <- MASIH DI DALAM FUNCTION
     async function prepare() {
       try {
         await new Promise(resolve => setTimeout(resolve, 500)); // Pura2 loading 0.5s
@@ -27,21 +26,21 @@ export default function App() {
   }, []);
 
   const onLayoutRootView = useCallback(async () => {
-    if (appIsReady && fontsLoaded) {
+    if (appIsReady) { // <- HAPUS && fontsLoaded
       await SplashScreen.hideAsync(); // BARU HILANGIN SPLASH KALAU UDAH SIAP
     }
-  }, [appIsReady, fontsLoaded]);
+  }, [appIsReady]); // <- HAPUS fontsLoaded
 
-  if (!appIsReady ||!fontsLoaded) {
+  if (!appIsReady) { // <- HAPUS ||!fontsLoaded
     return null; // Tetep nampilin Splash bawaan Expo
   }
 
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      {/* shorof digital */}
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} onLayout={onLayoutRootView}>
+      <Text>Shorof Digital Jalan ✅</Text> {/* Buat ngetes */}
     </View>
   );
-}
+} // <- KURUNG TUTUP FUNCTION ADA DI PALING BAWAH
 import {
   Search,
   BookOpen,
