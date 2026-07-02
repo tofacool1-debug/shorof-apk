@@ -3,21 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useMemo, useRef } from "react";
-import { useCallback, useEffect, useState } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
-import { useFonts } from 'expo-font';
 
 SplashScreen.preventAutoHideAsync(); // JANGAN HILANGIN INI
 
 export default function App() {
-  const [appIsReady, setAppIsReady] = useState(false);
-
-  const [fontsLoaded] = useFonts({
-    'Poppins': require('./assets/fonts/Poppins-Regular.ttf'),
-    //... font kamu yang lain
-  });
+  const [appIsReady, setAppIsReady] = useState(false),
+  };
 
   useEffect(() => {
     async function prepare() {
