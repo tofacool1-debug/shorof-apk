@@ -7,6 +7,7 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import {
   StyleSheet,
   Text,
+  Animated,
   View,
   ScrollView,
   TextInput,
@@ -66,6 +67,16 @@ import TabTasrifIstilahi from "./components/TasrifIstilahiView";
 import TabTasrifLughowi from "./components/TasrifLughowiView";
 import TabShorofMasdarTable from "./components/ShorofMasdarTableView";
 import Layout from './components/Layout'; // L besar semua
+import { useFloat } from '@/hooks/useFloat';
+
+export default function Page() {
+  const { style } = useFloat();
+  return (
+    <Animated.Text style={style} className="font-arabic text-2xl">
+      مَقَاويل
+    </Animated.Text>
+  )
+}
 
 export function computeAsal(
   fa: string,
