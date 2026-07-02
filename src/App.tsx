@@ -8,11 +8,6 @@ import { View, Text } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 
 SplashScreen.preventAutoHideAsync(); // JANGAN HILANGIN INI
-
-export default function App() {
-  const [appIsReady, setAppIsReady] = useState(false); // <- GAK ADA ; DI SINI
-
-  useEffect(() => { // <- MASIH DI DALAM FUNCTION
     async function prepare() {
       try {
         await new Promise(resolve => setTimeout(resolve, 500)); // Pura2 loading 0.5s
