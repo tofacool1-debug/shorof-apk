@@ -4,6 +4,50 @@
  */
 
 import React, { useState, useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useState } from 'react';
+import { View } from 'react-native';
+import * as SplashScreen from 'expo-splash-screen';
+import { useFonts } from 'expo-font';
+
+SplashScreen.preventAutoHideAsync(); // JANGAN HILANGIN INI
+
+export default function App() {
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  const [fontsLoaded] = useFonts({
+    'Poppins': require('./assets/fonts/Poppins-Regular.ttf'),
+    //... font kamu yang lain
+  });
+
+  useEffect(() => {
+    async function prepare() {
+      try {
+        await new Promise(resolve => setTimeout(resolve, 500)); // Pura2 loading 0.5s
+      } catch (e) {
+        console.warn(e);
+      } finally {
+        setAppIsReady(true);
+      }
+    }
+    prepare();
+  }, []);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (appIsReady && fontsLoaded) {
+      await SplashScreen.hideAsync(); // BARU HILANGIN SPLASH KALAU UDAH SIAP
+    }
+  }, [appIsReady, fontsLoaded]);
+
+  if (!appIsReady ||!fontsLoaded) {
+    return null; // Tetep nampilin Splash bawaan Expo
+  }
+
+  return (
+    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+      {/* ISI APP KAMU DI SINI */}
+    </View>
+  );
+}
 import {
   Search,
   BookOpen,
