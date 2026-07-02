@@ -18,7 +18,6 @@ SplashScreen.preventAutoHideAsync(); // JANGAN HILANGIN INI
       }
     }
     prepare();
-  }, []);
 
   const onLayoutRootView = useCallback(async () => {
     if (appIsReady) { // <- HAPUS && fontsLoaded
