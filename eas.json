@@ -6,7 +6,8 @@
   "build": {
     "production": {
       "android": {
-        "buildType": "apk"},
+      "buildType": "apk"},
+      "splitByAbi": true,
       "distribution": "internal",
       "channel": "production",
       "env": {
