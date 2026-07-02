@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Google dihapus. Pake expo-font di _layout.tsx */
+/* Scrollbar dihapus. RN gak support */
+/* text-shadow dihapus. Gak support di RN */
