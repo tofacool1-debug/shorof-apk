@@ -10,8 +10,8 @@ import * as SplashScreen from 'expo-splash-screen';
 SplashScreen.preventAutoHideAsync(); // JANGAN HILANGIN INI
 
 export default function App() {
-  const [appIsReady, setAppIsReady] = useState(false),
-  };
+  const [appIsReady, setAppIsReady] = useState(false)
+};
 
   useEffect(() => {
     async function prepare() {
@@ -38,7 +38,7 @@ export default function App() {
 
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      {/* ISI APP KAMU DI SINI */}
+      {/* shorof digital */}
     </View>
   );
 }
