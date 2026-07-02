@@ -1,2 +1,4 @@
-import App from './src/App.tsx';
-export default App;
+import { registerRootComponent } from 'expo';
+import App from './src/App'; //.js gak usah ditulis
+
+registerRootComponent(App);
