@@ -65,6 +65,7 @@ import {
 import TabTasrifIstilahi from "./components/TasrifIstilahiView";
 import TabTasrifLughowi from "./components/TasrifLughowiView";
 import TabShorofMasdarTable from "./components/ShorofMasdarTableView";
+import Layout from './components/Layout'; // L besar semua
 
 export function computeAsal(
   fa: string,
