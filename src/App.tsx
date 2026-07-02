@@ -319,6 +319,13 @@ function getBabExplanation(bab: number): BabInfo {
 }
 
 export default function App() {
+  {
+  return (
+    <Layout>
+      <Text className="font-arabic text-2xl">بسم الله</Text>
+    </Layout>
+  );
+}
   // Main Selection and Tab States
   const [selectedEntry, setSelectedEntry] = useState<DictionaryEntry>(
     PRESET_DICTIONARY[0],
