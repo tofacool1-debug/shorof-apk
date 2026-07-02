@@ -1,12 +1,11 @@
-{ 
-  "$schema": "https://schema.expo.dev/version/56.0.0.json",
+{
   "expo": {
     "name": "Shorof Digital Pro",
     "slug": "shorof-digital",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -20,29 +19,15 @@
       "bundleIdentifier": "com.shorof.digital"
     },
     "android": {
-      "package": "com.shorof.digital",
-      "versionCode": 1,
-      "icon": "./assets/icon.png",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "jsEngine": "hermes",
-      "enableProguardInReleaseBuilds": true,
-      "shrinkResources": true,
-      "compileSdkVersion": 36,
-      "targetSdkVersion": 36,
-      "buildToolsVersion": "36.0.0",
-      "permissions": [
-        "VIBRATE"
-      ]
+      "package": "com.shorof.digital"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "expo-font"
-    ],
     "updates": {
       "url": "https://u.expo.dev/de3329e9-ed7a-4005-abfa-7bda2599b5d4",
       "enabled": true,
