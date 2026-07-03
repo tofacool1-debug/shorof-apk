@@ -14,7 +14,7 @@
       "autoIncrement": true,
       "channel": "production",
       "distribution": "internal",
-      "node": "20.11.0", 
+      "node": "20.19.5", 
       "env": {
         "EXPO_USE_FAST_RESOLVER": "1"
       },
