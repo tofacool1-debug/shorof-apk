@@ -14,12 +14,16 @@
       "autoIncrement": true,
       "channel": "production",
       "distribution": "internal",
-      "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleRelease",
-      },
+      "node": "20.11.0", 
       "env": {
         "EXPO_USE_FAST_RESOLVER": "1"
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "cache": {
+        "key": "v2"
       }
     }
   },
