@@ -15,7 +15,7 @@
       "channel": "production",
       "distribution": "internal",
       "env": {
-        "ENABLE_HERMES": "true"
+        "EXPO_USE_FAST_RESOLVER": "1"
       },
       "android": {
         "buildType": "apk",
