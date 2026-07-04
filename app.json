@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.shorof.digital" 
+      "bundleIdentifier": "com.shorof.digital"
     },
     "android": {
       "package": "com.shorof.digital",
@@ -29,12 +29,6 @@
       "favicon": "./assets/images/icon.png"
     },
     "plugins": [
-      [
-        "expo-iap",
-        {
-          "enableIapV3": true
-        }
-      ],
       [
         "expo-router",
         {
