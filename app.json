@@ -22,8 +22,8 @@
       "backgroundColor": "#ffffff",
       "enableProguardInReleaseBuilds": true,
       "enableShrinkResourcesInReleaseBuilds": true,
-      "compileSdkVersion": 35,
-      "targetSdkVersion": 35
+      "compileSdkVersion": 34,
+      "targetSdkVersion": 34
     },
     "web": {
       "favicon": "./assets/images/icon.png"
