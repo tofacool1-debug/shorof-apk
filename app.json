@@ -19,24 +19,11 @@
     },
     "android": {
       "package": "com.shorof.digital",
-      "backgroundColor": "#ffffff",
-      "enableProguardInReleaseBuilds": true,
-      "enableShrinkResourcesInReleaseBuilds": true,
-      "compileSdkVersion": 34,
-      "targetSdkVersion": 34
+      "backgroundColor": "#ffffff"
     },
     "web": {
       "favicon": "./assets/images/icon.png"
     },
-    "plugins": [
-      [
-        "expo-router",
-        {
-          "origin": "https://replit.com/"
-        }
-      ],
-      "expo-font"
-    ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
