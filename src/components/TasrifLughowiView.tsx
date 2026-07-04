@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { TasrifIstilahi, TasrifLughowi } from "../types";
 import { IilalEngine } from "../utils/iilalEngine";
 import { PRONOUNS_14, PRONOUNS_6, PRONOUNS_12, PRONOUNS_ISIM_6 } from "../utils/dictionaryData";
-import { Table, Copy, Lock, Sparkles, BookOpen, Activity, Award, User, UserCheck, Clock, MapPin, Hammer, ChevronRight } from "lucide-react";
+import { Table, Copy, Lock, Sparkles, BookOpen, Activity, Award, User, UserCheck, Clock, MapPin, Hammer, ChevronRight } from "@expo/vector-icons";
 
 interface TasrifLughowiViewProps {
   tasrif: TasrifIstilahi;
