@@ -1,5 +1,4 @@
-import 'react-native-gesture-handler';
-import 'react-native-reanimated';
-import App from './src/App';
+    import 'react-native';
+    import App from './src/App';
 
-export default App;
+    export default App;
