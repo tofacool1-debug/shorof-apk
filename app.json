@@ -3,13 +3,6 @@
     "name": "Shorof Digital Pro",
     "slug": "shorof-digital",
     "version": "1.0.0",
-    "android": {
-      "package": "com.shorof.digital",
-      "enableProguardInReleaseBuilds": true,
-      "enableShrinkResourcesInReleaseBuilds": true,
-      "compileSdkVersion": 35,
-      "targetSdkVersion": 35
-    }
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "shorof-digital",
@@ -26,7 +19,11 @@
     },
     "android": {
       "package": "com.shorof.digital",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+      "enableProguardInReleaseBuilds": true,
+      "enableShrinkResourcesInReleaseBuilds": true,
+      "compileSdkVersion": 35,
+      "targetSdkVersion": 35
     },
     "web": {
       "favicon": "./assets/images/icon.png"
