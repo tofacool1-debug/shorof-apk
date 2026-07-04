@@ -5,7 +5,7 @@
 
 import React, { useState } from "react";
 import { TasrifIstilahi, ShighotDetail } from "../types";
-import { Info, Lock, ChevronLeft, ChevronRight } from "lucide-react";
+import { Info, Lock, ChevronLeft, ChevronRight } from "@expo/vector-icons";
 import { IilalEngine } from "../utils/iilalEngine";
 
 interface TasrifIstilahiViewProps {
