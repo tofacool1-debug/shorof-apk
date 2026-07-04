@@ -45,7 +45,7 @@ import {
   LockKeyhole,
   ChevronDown,
   ChevronUp,
-} from "@expo/vector-icons";
+} from "lucide-react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { DictionaryEntry, TasrifIstilahi, DataWazan } from "./types";
 import {
