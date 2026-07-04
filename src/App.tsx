@@ -66,17 +66,6 @@ import {
 import TabTasrifIstilahi from "./components/TasrifIstilahiView";
 import TabTasrifLughowi from "./components/TasrifLughowiView";
 import TabShorofMasdarTable from "./components/ShorofMasdarTableView";
-import Layout from './components/Layout'; // L besar semua
-import { useFloat } from '@/hooks/useFloat';
-
-export default function Page() {
-  const { style } = useFloat();
-  return (
-    <Animated.Text style={style} className="font-arabic text-2xl">
-      مَقَاويل
-    </Animated.Text>
-  )
-}
 
 export function computeAsal(
   fa: string,
@@ -330,13 +319,7 @@ function getBabExplanation(bab: number): BabInfo {
 }
 
 export default function App() {
-  {
-  return (
-    <Layout>
-      <Text className="font-arabic text-2xl">بسم الله</Text>
-    </Layout>
-  );
-}
+  
   // Main Selection and Tab States
   const [selectedEntry, setSelectedEntry] = useState<DictionaryEntry>(
     PRESET_DICTIONARY[0],
