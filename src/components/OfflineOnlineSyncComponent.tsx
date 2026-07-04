@@ -22,7 +22,7 @@ import {
   Flame,
   CheckCircle,
   Code
-} from "lucide-react";
+} from "@expo/vector-icons";
 import { PRESET_DICTIONARY } from "../utils/dictionaryData";
 import {
   initIndexedDB,
