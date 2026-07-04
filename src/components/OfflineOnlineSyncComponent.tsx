@@ -22,7 +22,7 @@ import {
   Flame,
   CheckCircle,
   Code
-} from "@expo/vector-icons";
+} from "lucide-react-native";
 import { PRESET_DICTIONARY } from "../utils/dictionaryData";
 import {
   initIndexedDB,
