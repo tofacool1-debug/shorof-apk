@@ -7,7 +7,7 @@ import React from "react";
 import { DictionaryEntry } from "../types";
 import { IilalEngine } from "../utils/iilalEngine";
 import { getVocalizedRoot } from "../utils/dictionaryData";
-import { Table, Info } from "@expo/vector-icons";
+import { Table, Info } from "lucide-react-native";
 
 interface ShorofMasdarTableViewProps {
   entries: DictionaryEntry[];
