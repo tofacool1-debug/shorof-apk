@@ -1,4 +1,4 @@
-import { registerRootComponent } from 'expo';
+import 'react-native';
 import App from './src/App';
 
-registerRootComponent(App);
+export default App;
