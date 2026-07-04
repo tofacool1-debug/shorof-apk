@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useMemo } from "react";
-import { Search, BookOpen, Star, Filter, ChevronRight, Menu } from "lucide-react";
+import { Search, BookOpen, Star, Filter, ChevronRight, Menu } from "@expo/vector-icons";
 import { DictionaryEntry } from "../types";
 import { PRESET_DICTIONARY } from "../utils/dictionaryData";
 import { IilalEngine } from "../utils/iilalEngine";
